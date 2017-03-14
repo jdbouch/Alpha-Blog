@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #216B7F;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 150px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Alpha Blog</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><%= link_to 'About', about_path %></li>
+  </ul>
+</nav>
+
+<article>
+  <h1 id="home">Home</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet neque id orci scelerisque molestie. Donec ipsum tortor, mollis a accumsan sed, cursus tempus mauris. Mauris leo ex, tempus quis euismod a, lobortis et sem. Sed odio turpis, pharetra vel neque id, sodales blandit neque. Etiam pulvinar tellus non mi vulputate ultricies. Aliquam lacinia felis sit amet risus venenatis, at tempor lectus feugiat. Ut ornare egestas consectetur. Sed vitae posuere elit. Pellentesque rutrum, dui ac imperdiet ultricies, tellus neque gravida diam, a faucibus tellus sem sit amet leo. Proin id ipsum tellus. Donec scelerisque turpis quam. Curabitur ac ullamcorper eros. Duis pretium interdum molestie. Fusce tempus vel erat a euismod.</p>
+</article>
+<article>
+  <h1 id="about">About</h1>
+    <p>Nunc eu aliquet leo. Maecenas maximus quis mauris et interdum. Mauris vel ultrices metus. Donec fermentum, risus egestas placerat feugiat, felis mauris tincidunt arcu, et placerat elit nisi et orci. Duis molestie aliquam magna id tempus. Sed feugiat commodo leo vitae ultrices. Praesent sit amet risus a purus viverra suscipit id et purus.</p>
+</article>
+
+<footer>Copyright &copy; Alpha Blog</footer>
+
+</div>
+
+</body>
+</html>
