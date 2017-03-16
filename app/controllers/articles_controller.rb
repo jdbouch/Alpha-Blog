@@ -2,10 +2,30 @@ class ArticlesController < ApplicationController
     def new
         @article = Article.new
     end
+    
+    def edit
+        @article = Article.find(params[:id])
+    end
     def create
-        @article = Article.new(article_params)
-        @article.save
-        redirect_to articles_show(@article)
+       @article = Article.new(article_params)
+       if @article.save
+            flash[:notice] = "Arcitle was successfully created"
+            redirect_to article_path(@article)
+       else
+            render 'new'
+       end
+    end
+    def update
+        @article = Article.find(params[:id])
+       if @article.update(article_params)
+           flash[:notice] = "Arcitle was successfully updated"
+            redirect_to article_path(@article)
+       else
+            render 'edit'
+       end
+    end
+    def show
+        @article = Article.find(params[:id])
     end
     
     private
@@ -13,3 +33,4 @@ class ArticlesController < ApplicationController
             params.require(:article).permit(:title, :description)
         end
 end
+
